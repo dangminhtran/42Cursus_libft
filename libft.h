@@ -20,6 +20,7 @@ char    *ft_strchr( const char *string, int searchedChar);
 char    *ft_strrchr(const char *string, int searchedChar);
 void    ft_bzero(void *s, size_t n);
 void    *ft_memset(void *pointer, int value, size_t count);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 size_t	ft_strlen(const char *str);
 size_t ft_strlcpy(char *dest, char *src, size_t size);
