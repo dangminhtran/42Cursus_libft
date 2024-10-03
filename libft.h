@@ -21,9 +21,23 @@ char    *ft_strrchr(const char *string, int searchedChar);
 void    ft_bzero(void *s, size_t n);
 void    *ft_memset(void *pointer, int value, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memmove(void* dest, const void *src, size_t size);
+void	*ft_memchr(const void *memoryBlock, int chr, size_t size);
+int ft_memcmp(const void *ptr1, const void *ptr2, size_t size);
 
 size_t	ft_strlen(const char *str);
 size_t ft_strlcpy(char *dest, char *src, size_t size);
 size_t ft_strlcat(char *dest, char *src, size_t size);
+
+// Utilisation de malloc
+void    *calloc(size_t count, size_t size);
+char	*ft_strdup(const char *str);
+
+// Additional functions
+char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *str, char const *set);
+
+
 
 #endif
