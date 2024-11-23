@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dangtran <dangtran@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 10:13:30 by dangtran          #+#    #+#             */
+/*   Updated: 2024/11/13 16:10:22 by dangtran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 //#include <stdio.h>
 //#include <ctype.h>
 
@@ -7,7 +20,7 @@ int	ft_isalpha(int c)
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-//int	main() {
+// int	main(void) {
 //	int i;
 //	int test_ok;
 //
@@ -26,5 +39,5 @@ int	ft_isalpha(int c)
 //			printf("All good");
 //		}
 //	}
-//	return 0;
+//	return (0);
 //}

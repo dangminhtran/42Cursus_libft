@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dangtran <dangtran@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 11:33:12 by dangtran          #+#    #+#             */
+/*   Updated: 2024/11/18 20:31:49 by dangtran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
@@ -5,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
-	while (s && s[i])
+	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;

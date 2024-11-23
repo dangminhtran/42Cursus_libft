@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dangtran <dangtran@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 10:16:30 by dangtran          #+#    #+#             */
+/*   Updated: 2024/11/18 21:03:23 by dangtran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	size_t		i;
-	size_t		j;
 	char		*dest;
 
 	if (!str)
@@ -15,17 +25,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		if (i >= start && j < len)
-        {
-			dest[j] = str[i];
-            j++;
-        }
-		i++;
-	}
-	dest[j] = 0;
+	dest[len] = '\0';
+	while (len--)
+		dest[len] = str[start + len];
 	return (dest);
 }

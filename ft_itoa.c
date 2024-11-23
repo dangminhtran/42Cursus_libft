@@ -1,18 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dangtran <dangtran@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 11:01:34 by dangtran          #+#    #+#             */
+/*   Updated: 2024/11/18 20:27:32 by dangtran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_digitlen(long n)
 {
 	size_t	len;
 
-	if (n == 0)
-		return (1);
-	len = 0;
+	len = 1;
 	if (n < 0)
 	{
 		n *= -1;
 		len++;
 	}
-	while (n > 0)
+	while (n >= 10)
 	{
 		n /= 10;
 		len++;
@@ -29,7 +39,7 @@ char	*ft_itoa(int n)
 
 	nbr = (long)n;
 	n_len = ft_digitlen(nbr);
-	str = (char *)malloc(sizeof(char) * (n_len + 1));
+	str = (char *)malloc(sizeof(char) * (n_len +1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -48,11 +58,3 @@ char	*ft_itoa(int n)
 	str[n_len] = 0;
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	#include <stdio.h>
-
-// 	printf("Result: %s\n", ft_itoa(-2147483648));
-// 	return (0);
-// }

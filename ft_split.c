@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dangtran <dangtran@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 10:37:09 by dangtran          #+#    #+#             */
+/*   Updated: 2024/11/16 12:11:35 by dangtran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_count_word_len(char const *str, char c)
@@ -65,27 +77,8 @@ char	**ft_split(char const *s, char c)
 				return (ft_free(strs, i));
 			i++;
 		}
-		s += word_len;
+	s += word_len;
 	}
 	strs[i] = 0;
 	return (strs);
 }
-
-// int	main(void)
-// {
-// 	#include <stdio.h>
-// 	char	str[] = "bonjour les amis vous allez bien ?";
-// 	//char	str[] = "-";
-// 	char	**result;
-// 	int	i;
-
-// 	result = ft_split(str, ' ');
-// 	i = 0;
-// 	while (result[i])
-// 	{
-// 		printf("Index %d : %s\n", i, result[i]);
-// 		i++;
-// 	}
-// 	//printf("OUTPUT% %s\n", result[1]);
-// 	return (0);
-//  }
